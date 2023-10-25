@@ -18,5 +18,24 @@ body {
 }
 .titulo span{
     font-size: 2rem;
-    font-weight: bold;
+}
+.contenedor{
+    width: 70rem;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+.navegacion-principal
+{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verical */
+}
+.navegacion-principal a{
+    text-decoration: none;
+    margin-left: 50px;
+}
+.nav-bg{
+    background-color: var(--Secundario);
 }

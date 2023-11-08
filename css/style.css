@@ -20,7 +20,7 @@ body {
     font-size: 2rem;
 }
 .contenedor{
-    width: 70rem;
+    max-width: 120rem;
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
@@ -29,13 +29,29 @@ body {
 .navegacion-principal
 {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verical */
+    flex-direction: column;
+    justify-content: space-between; /* Centra horizontalmente */
+    font-weight: bold;
+    font-size: 2rem;
+    align-items: center;
 }
 .navegacion-principal a{
+    padding: 1rem;
     text-decoration: none;
-    margin-left: 50px;
+    color: var(--blanco);
+
 }
 .nav-bg{
     background-color: var(--Secundario);
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--Primario);
+    color: var(--oscuro);
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
 }

@@ -7,7 +7,12 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
 body {
     font-size: 16px;
     font-family: 'Krub', sans-serif;
@@ -16,6 +21,20 @@ body {
     text-align: center;
     font-size: 3.8rem;
 }
+/*Tipografias*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1, h2, h3{
+    text-align: center;
+}
+
 .titulo span{
     font-size: 2rem;
 }
@@ -32,7 +51,6 @@ body {
     flex-direction: column;
     justify-content: space-between; /* Centra horizontalmente */
     font-weight: bold;
-    font-size: 2rem;
     align-items: center;
 }
 .navegacion-principal a{
@@ -50,8 +68,66 @@ body {
     color: var(--oscuro);
 }
 
-@media (min-width: 768px) {
+
+@media (min-width:768px) {
     .navegacion-principal{
         flex-direction: row;
+        font-size: 2rem;
+    }
+}
+
+/*@media (min-width:480px) and (max-width:767px) {
+    .contenedor{
+        flex-direction: row;
+        font-size: 2rem;
+    }
+}*/
+
+
+/*hero*/
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-top: 20px;
+}
+.contenedor-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-hero p, .contenedor-hero h2{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton{
+    background-color: var(--Secundario);
+    text-decoration: none;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    color: var(--blanco);
+    margin-top: 3rem;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 90%;
+
+}
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
     }
 }
